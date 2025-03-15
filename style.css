@@ -1,0 +1,52 @@
+h1{
+    text-align: center;
+}
+
+
+.button{
+    width:200px;
+    height:200px;
+    background-color: silver;
+    border: solid 10px burlywood;
+    margin:1rem;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+}
+
+.button:hover{
+    background-color:rgba(192, 192, 192, 0.589);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.play{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.choose{
+    text-align: center;
+    background-color: greenyellow;
+    color:coral;
+    width: 100px;
+    height:50px;
+    line-height: 50px;
+    font-size:20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+.choose:hover{
+    background-color: rgba(172, 255, 47, 0.672);
+}
+
+.player_1{
+    background-color: yellow;
+}

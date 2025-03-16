@@ -94,7 +94,7 @@ function display_winner(btn){
         player_1.style.width = '200px';
         player_1.style.height = "100px";
     }
-    else{
+    if(btn.innerText==='X'){
         setTimeout(()=>alert('Player-2 is the winner'), 1000);
         player_2.innerText = "Player-2 is the winner";
         player_2.style.width = '200px';

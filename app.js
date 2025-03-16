@@ -85,6 +85,13 @@ function game_checker(btn){
         display_winner(btn);
         gameOver = 1;
     }
+    if ([...buttons].every(button => button.innerText !== "")) {
+        setTimeout(() => alert("Draw!"), 1000);
+        player_1.innerText = "Draw";
+        player_2.innerText = "Draw";
+        buttons.forEach(button => button.setAttribute("disabled", "true"));
+        gameOver = 1;
+    }
 }
 
 function display_winner(btn){
@@ -94,16 +101,11 @@ function display_winner(btn){
         player_1.style.width = '200px';
         player_1.style.height = "100px";
     }
-    if(btn.innerText==='O'){
+    else if(btn.innerText==='O'){
         setTimeout(()=>alert('Player-2 is the winner'), 1000);
         player_2.innerText = "Player-2 is the winner";
         player_2.style.width = '200px';
         player_2.style.height = "100px";
-    }
-    else{
-        setTimeout(()=>alert('Draw'), 1000);
-        player_2.innerText = "Draw";
-        player_1.innerText = "Draw";
     }
     buttons.forEach(button=>{
         button.setAttribute('disabled', 'true');

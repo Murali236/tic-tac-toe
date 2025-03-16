@@ -25,6 +25,12 @@ function game_click(event){
     let btn=event.target;
     if(btn.innerText === ""){
         btn.innerText = btn_text();
+        if(btn.innerText == "X"){
+            btn.style.color = "red";
+        }
+        else{
+            btn.style.color = "blue";
+        }
         btn.setAttribute('disabled', 'true');
     }
     game_checker(btn);
@@ -86,11 +92,18 @@ function display_winner(btn){
         setTimeout(()=>alert('Player-1 is the winner'), 1000);
         player_1.innerText = "Player-1 is the winner";
         player_1.style.width = '200px';
+        player_1.style.height = "100px";
     }
     else{
         setTimeout(()=>alert('Player-2 is the winner'), 1000);
         player_2.innerText = "Player-2 is the winner";
         player_2.style.width = '200px';
+        player_2.style.height = "100px";
+    }
+    else{
+        setTimeout(()=>alert('Draw'), 1000);
+        player_2.innerText = "Draw";
+        player_1.innerText = "Draw";
     }
     buttons.forEach(button=>{
         button.setAttribute('disabled', 'true');
